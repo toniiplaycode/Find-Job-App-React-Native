@@ -1,0 +1,6 @@
+- vì sao dùng expo (https://chat.openai.com/c/62430a61-3b6c-4126-91ba-4d1f1e94f3dd);
+- reactJS dùng HTML thì react native dùng native mobile components
+- lệnh khởi tạo: npx create-expo-app@latest -e with-router ./ (https://chat.openai.com/c/0d71e694-9124-43eb-8cf3-041a19ec59f8)
+ - install thêm vài package hay dùng: npm i expo-font axios react-native-dotenv
+ - scrollView: để có thể scroll trên điện thoại
+ - safeAreaView: hiển thị nội dung đúng với kích thước của màn hình 

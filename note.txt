@@ -2,5 +2,13 @@
 - reactJS dùng HTML thì react native dùng native mobile components
 - lệnh khởi tạo: npx create-expo-app@latest -e with-router ./ (https://chat.openai.com/c/0d71e694-9124-43eb-8cf3-041a19ec59f8)
  - install thêm vài package hay dùng: npm i expo-font axios react-native-dotenv
- - scrollView: để có thể scroll trên điện thoại
- - safeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
+ - các components trong react native:
+   + View: như thẻ div
+   + Text: chứa text bên trong
+   + ScrollView: để có thể scroll trên điện thoại
+   + SafeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
+   + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
+   + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
+   
+
+- userFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)   

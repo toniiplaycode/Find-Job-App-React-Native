@@ -9,6 +9,8 @@
    + SafeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
    + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
    + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
+   + ActivityIndicator: loading kiểu spinner
    
 
-- userFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)   
+- userFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)  
+- dùng RAPID để fake API

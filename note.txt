@@ -3,14 +3,16 @@
 - lệnh khởi tạo: npx create-expo-app@latest -e with-router ./ (https://chat.openai.com/c/0d71e694-9124-43eb-8cf3-041a19ec59f8)
  - install thêm vài package hay dùng: npm i expo-font axios react-native-dotenv
  - các components trong react native:
-   + View: như thẻ div
-   + Text: chứa text bên trong
-   + ScrollView: để có thể scroll trên điện thoại
-   + SafeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
-   + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
-   + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
-   + ActivityIndicator: loading kiểu spinner
+  + View: như thẻ div
+  + Text: chứa text bên trong
+  + ScrollView: để có thể scroll trên điện thoại
+  + SafeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
+  + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
+  + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
+  + ActivityIndicator: loading kiểu spinner
+  + RefreshControl: component này nằm trong ScrollView hoặc ListView, có 2 thuộc tính: refreshing (nhận true hoặc false) và onRefresh (hàm xử lý event)
    
 
-- userFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)  
+- useFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)  
 - dùng RAPID để fake API
+- tên file trong dấu [], ví dụ: [id].js đó là tham số dùng để điều hướng router đến đó

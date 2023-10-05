@@ -1,25 +1,29 @@
 import { useRouter } from 'expo-router';
 import styles from './popularjobs.style'
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator, FlatList, TouchableOpacity } from 'react-native';
 import { COLORS, SIZES } from '../../../constants';
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import { useState } from 'react';
 
 import useFetch from '../../../hook/useFetch'; // thêm để fetch được dữ liệu
 
 const Popularjobs = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch(
-    "search",
-    {
-      query: 'Python developer in Texas, USA',
-      page: '1',
-      num_pages: '1'
-    }
-  );
+  const { data, isLoading, error } = useFetch("search", {
+    query: "React developer",
+    num_pages: "1",
+  });
 
-  console.log(data);
-    
+  // console.log("fetch API: ", data);
+  
+  const [selectedJob, setSelectedJob] = useState();
+
+  // chuyển sang trang detail
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`);
+    setSelectedJob(item.job_id);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -35,13 +39,15 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size='large' color={COLORS.primary}/>
         ) : error ? (
-          <Text>Something went wrong !</Text>
+          <Text>{error}</Text>
         ) : (
           <FlatList 
-            data={[1,2,3,4,5,6,7,8,9]}
-            renderItem={ ({item}) => (
+            data={data}
+            renderItem={({item}) => (
               <PopularJobCard
                 item={item}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress}
               />
             )}
             keyExtractor={item => item?.job_id}

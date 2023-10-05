@@ -37,7 +37,6 @@ const Home = () => {
                     <Nearbyjobs/>
                 </View>
             </ScrollView>
-
         </SafeAreaView>
     )
 }

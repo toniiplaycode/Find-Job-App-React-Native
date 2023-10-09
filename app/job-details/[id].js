@@ -19,7 +19,7 @@ const JobDetails = () => {
     return (
         <ScrollView>
             <Text>
-                job details
+                {/* job details */}
             </Text>            
         </ScrollView>
     )

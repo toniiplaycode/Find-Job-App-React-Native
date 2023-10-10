@@ -2,7 +2,7 @@
 - reactJS dùng HTML thì react native dùng native mobile components
 - lệnh khởi tạo: npx create-expo-app@latest -e with-router ./ (https://chat.openai.com/c/0d71e694-9124-43eb-8cf3-041a19ec59f8)
  - install thêm vài package hay dùng: npm i expo-font axios react-native-dotenv
- - các components trong react native:
+ - các components trong react-native và expo-router:
   + View: như thẻ div
   + Text: chứa text bên trong
   + ScrollView: để có thể scroll trên điện thoại
@@ -11,6 +11,8 @@
   + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
   + ActivityIndicator: loading kiểu spinner
   + RefreshControl: component này nằm trong ScrollView hoặc ListView, có 2 thuộc tính: refreshing (nhận true hoặc false) và onRefresh (hàm xử lý event)
+  + Stack: (https://docs.expo.dev/router/advanced/stack/)
+  
    
 
 - useFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)  

@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 
 import styles from './company.style'
 
-const Company = () => {
+const Company = ({ companyLogo, jobTitle, companyName, location }) => {
   return (
     <View>
       <Text>Company</Text>

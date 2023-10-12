@@ -7,14 +7,14 @@ import { useState } from 'react';
 
 const jobTypes = ['Full-time', 'Part-time', 'Contractor']; 
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState('Full-time');
 
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Tonii</Text>
+        {/* <Text style={styles.userName}>Hello Tonii</Text> */}
         <Text style={styles.welcomeMessage}>Find a job</Text>
       </View>
 
@@ -22,15 +22,16 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=''
-            onChange={() => {}}
+            value={searchTerm}
+            onChangeText={(text) => setSearchTerm(text)}
             placeholder='What are you looking for ?'
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}} >
+        <TouchableOpacity style={styles.searchBtn} onPress={handleClick} >
           <Image 
             source={icons.search}
+            resizeMode='contain'
             style={styles.searchBtnImage}
           />
         </TouchableOpacity>

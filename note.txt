@@ -1,3 +1,4 @@
+- video tutorial: (https://www.youtube.com/watch?v=mJ3bGvy0WAY&ab_channel=JavaScriptMastery)
 - vì sao dùng expo (https://chat.openai.com/c/62430a61-3b6c-4126-91ba-4d1f1e94f3dd);
 - reactJS dùng HTML thì react native dùng native mobile components
 - lệnh khởi tạo: npx create-expo-app@latest -e with-router ./ (https://chat.openai.com/c/0d71e694-9124-43eb-8cf3-041a19ec59f8)
@@ -5,16 +6,15 @@
  - các components trong react-native và expo-router:
   + View: như thẻ div
   + Text: chứa text bên trong
-  + ScrollView: để có thể scroll trên điện thoại
+  + ScrollView: vùng có thể scroll trên điện thoại, ngoài vùng ScrollView thì không thể scroll được 
   + SafeAreaView: hiển thị nội dung đúng với kích thước của màn hình 
   + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
   + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
   + ActivityIndicator: loading kiểu spinner
   + RefreshControl: component này nằm trong ScrollView hoặc ListView, có 2 thuộc tính: refreshing (nhận true hoặc false) và onRefresh (hàm xử lý event)
-  + Stack: (https://docs.expo.dev/router/advanced/stack/)
+  + Stack: có các thuộc tính có thể chỉnh header (https://docs.expo.dev/router/advanced/stack/)
+  + Linking.openURL(url): như thẻ a
   
-   
-
 - useFonts (expo): dùng để đổi font chữ (https://docs.expo.dev/versions/latest/sdk/font/)  
-- dùng RAPID để fake API
+- dùng RAPID để fake API, 1 tháng nó chỉ cho free 200 request nên mình phải dùng tip là sài nhiều acc GG để dùng
 - tên file trong dấu [], ví dụ: [id].js đó là tham số dùng để điều hướng router đến đó

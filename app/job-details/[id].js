@@ -26,7 +26,7 @@ const JobDetails = () => {
         }
     );
 
-    console.log('job detail: ', data);
+    // console.log('job detail: ', data);
 
     const [refreshing, setRefreshing] = useState(false);
     const [activeTab, setActiveTab] = useState(tabs[0]);

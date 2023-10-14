@@ -34,22 +34,22 @@ const JobDetails = () => {
     const onRefresh = useCallback(() => {
         setRefreshing(true);
         reFetch();
-        setRefreshing(false)
+        setRefreshing(false);
     });
 
-    const displayTableContet = () => {
-        switch (activeTab) {
+    const displayTableContent = () => {
+        switch (activeTab) {     
+            case "About":
+                return(
+                    <JobAbout
+                        info={data[0].job_description ?? "No data provided !"}
+                    />
+                )
             case "Qualifications":
                 return(
                     <Specifics
                         title='Qualifications'
                         points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
-                    />
-                )     
-            case "About":
-                return(
-                    <JobAbout
-                        info={data[0].job_description ?? "No data provided !"}
                     />
                 )
             case "Responsibilities":
@@ -79,7 +79,9 @@ const JobDetails = () => {
                         />
                     ),
                     headerRight: () => (
-                        <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' />
+                        <ScreenHeaderBtn 
+                            iconUrl={icons.share}
+                            dimension='60%' />
                     ),
                     headerTitle: ""
                 }}
@@ -109,7 +111,7 @@ const JobDetails = () => {
                             activeTab={activeTab}
                             setActiveTab={setActiveTab}
                         />
-                        {displayTableContet()}
+                        {displayTableContent()}
                     </View>
                 )
                 }

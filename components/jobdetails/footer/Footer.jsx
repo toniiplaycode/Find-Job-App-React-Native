@@ -2,7 +2,6 @@ import { View, Text, TouchableOpacity, Image, Linking } from 'react-native'
 
 import styles from './footer.style'
 import { icons } from '../../../constants'
-import { Link } from 'expo-router'
 
 const Footer = ({ url }) => {
   return (

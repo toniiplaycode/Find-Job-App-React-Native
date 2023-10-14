@@ -11,7 +11,7 @@
   + TextInput: như thẻ input, cũng có thuộc tính value, placeholder, ...
   + TouchableOpacity: khi nhấn vào nó sẽ mờ đi
   + ActivityIndicator: loading kiểu spinner
-  + RefreshControl: component này nằm trong ScrollView hoặc ListView, có 2 thuộc tính: refreshing (nhận true hoặc false) và onRefresh (hàm xử lý event)
+  + RefreshControl: component này nằm trong ScrollView hoặc ListView, có 2 thuộc tính: refreshing (nhận true hoặc false) và onRefresh (hàm xử lý event), khi vuốt từ trên xuống thì thực hiện sự kiện trong hàm onRefresh (thường dùng để fetch lại dữ liệu (load lại trang))
   + Stack: có các thuộc tính có thể chỉnh header (https://docs.expo.dev/router/advanced/stack/)
   + Linking.openURL(url): như thẻ a
   

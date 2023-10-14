@@ -9,10 +9,13 @@ import useFetch from '../../../hook/useFetch'; // thêm để fetch được d�
 
 const Popularjobs = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch("search", {
-    query: "React developer",
-    num_pages: "1",
-  });
+  const { data, isLoading, error } = useFetch(
+    "search",
+    {
+      query: "React developer",
+      num_pages: "1",
+    }  
+  );
 
   // console.log("fetch API: ", data);
   
